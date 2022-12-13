@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(name='deepexplain',
       version='0.3',
       description='Perturbation and gradient-based methods for Deep Network interpretability',
-      url='https://github.com/marcoancona/DeepExplain',
+      url='https://github.com/sDismuss/DeepExplain',
       author='Marco Ancona (ETH Zurich)',
       author_email='marco.ancona@inf.ethz.ch',
       license='MIT',
