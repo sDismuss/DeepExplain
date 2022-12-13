@@ -556,7 +556,7 @@ def deepexplain_grad(op, grad):
 
 class DeepExplain(object):
 
-    def __init__(self, graph=None, session=tf.get_default_session()):
+    def __init__(self, graph=None, session=tf.compat.v1.get_default_session()):
         self.method = None
         self.batch_size = None
         self.session = session
