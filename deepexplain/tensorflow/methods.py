@@ -635,7 +635,7 @@ class DeepExplain(object):
          and needs to be passed in feed_dict.
         :return:
         """
-        g = tf.get_default_graph()
+        g = tf.compat.v1.get_default_graph()
         for op in g.get_operations():
             if len(op.inputs) > 0 and not op.name.startswith('gradients'):
                 if op.type in UNSUPPORTED_ACTIVATIONS:
