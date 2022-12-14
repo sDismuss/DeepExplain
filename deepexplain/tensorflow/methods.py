@@ -73,7 +73,7 @@ class AttributionMethod(object):
         self.Y_shape = [None,] + T.get_shape().as_list()[1:]
         # Most often T contains multiple output units. In this case, it is often necessary to select
         # a single unit to compute contributions for. This can be achieved passing 'ys' as weight for the output Tensor.
-        self.Y = tf.placeholder(tf.float32, self.Y_shape)
+        self.Y = tf.compat.v1.placeholder(tf.float32, self.Y_shape)
         # placeholder_from_data(ys) if ys is not None else 1.0  # Tensor that represents weights for T
         self.T = self.T * self.Y
         self.symbolic_attribution = None
